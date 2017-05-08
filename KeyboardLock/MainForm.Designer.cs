@@ -1,4 +1,4 @@
-﻿namespace KeyboardMapping
+﻿namespace KeyboardLock
 {
     partial class MainForm
     {
@@ -30,21 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.BtnSwitch = new System.Windows.Forms.Button();
             this.Label = new System.Windows.Forms.Label();
             this.TestBox = new System.Windows.Forms.TextBox();
             this.TestBookTip = new System.Windows.Forms.ToolTip(this.components);
+            this.BtnKeyboardLock = new System.Windows.Forms.Button();
+            this.BtnTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
-            // 
-            // BtnSwitch
-            // 
-            this.BtnSwitch.Location = new System.Drawing.Point(105, 119);
-            this.BtnSwitch.Name = "BtnSwitch";
-            this.BtnSwitch.Size = new System.Drawing.Size(75, 23);
-            this.BtnSwitch.TabIndex = 0;
-            this.BtnSwitch.Text = "开启映射";
-            this.BtnSwitch.UseVisualStyleBackColor = true;
-            this.BtnSwitch.Click += new System.EventHandler(this.BtnSwitch_Click);
             // 
             // Label
             // 
@@ -55,7 +46,7 @@
             this.Label.Name = "Label";
             this.Label.Size = new System.Drawing.Size(161, 12);
             this.Label.TabIndex = 2;
-            this.Label.Text = "Caps Look 和 Ctrl 没有对调";
+            this.Label.Text = "键盘暂未锁定";
             this.Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TestBox
@@ -70,31 +61,42 @@
             this.TestBox.TabIndex = 1;
             this.TestBookTip.SetToolTip(this.TestBox, "检测是否映射成功");
             // 
+            // BtnKeyboardLock
+            // 
+            this.BtnKeyboardLock.Location = new System.Drawing.Point(105, 119);
+            this.BtnKeyboardLock.Name = "BtnKeyboardLock";
+            this.BtnKeyboardLock.Size = new System.Drawing.Size(75, 23);
+            this.BtnKeyboardLock.TabIndex = 0;
+            this.BtnKeyboardLock.Text = "锁定键盘";
+            this.BtnTip.SetToolTip(this.BtnKeyboardLock, "热键：F3");
+            this.BtnKeyboardLock.UseVisualStyleBackColor = true;
+            this.BtnKeyboardLock.Click += new System.EventHandler(this.BtnKeyboardLock_Click);
+            // 
             // MainForm
             // 
-            this.AcceptButton = this.BtnSwitch;
+            this.AcceptButton = this.BtnKeyboardLock;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.TestBox);
             this.Controls.Add(this.Label);
-            this.Controls.Add(this.BtnSwitch);
+            this.Controls.Add(this.BtnKeyboardLock);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KeyMap";
+            this.Text = "键盘锁定";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BtnSwitch;
         private System.Windows.Forms.Label Label;
         private System.Windows.Forms.TextBox TestBox;
         private System.Windows.Forms.ToolTip TestBookTip;
+        private System.Windows.Forms.Button BtnKeyboardLock;
+        private System.Windows.Forms.ToolTip BtnTip;
     }
 }
