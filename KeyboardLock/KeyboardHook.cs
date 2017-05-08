@@ -132,6 +132,12 @@ namespace KeyboardLock
                     Keys keyData = (Keys)MyKeyboardHookStruct.vkCode;
                     KeyEventArgs e = new KeyEventArgs(keyData);
                     KeyDownEvent(this, e);
+
+                    // 完全拦截F3
+                    if (keyData == Keys.F3)
+                    {
+                        return 1;
+                    }
                 }
 
                 //键盘按下
