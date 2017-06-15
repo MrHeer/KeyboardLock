@@ -62,7 +62,7 @@ namespace KeyboardLock
 
         ~MainForm()
         {
-            k_hook.Start();
+            k_hook.Stop();
         }
     }
 }
