@@ -59,7 +59,7 @@
             this.TestBox.Name = "TestBox";
             this.TestBox.Size = new System.Drawing.Size(100, 21);
             this.TestBox.TabIndex = 1;
-            this.TestBookTip.SetToolTip(this.TestBox, "检测是否映射成功");
+            this.TestBookTip.SetToolTip(this.TestBox, "测试是否锁定成功");
             // 
             // BtnKeyboardLock
             // 
